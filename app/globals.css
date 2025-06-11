@@ -8,51 +8,46 @@
   }
   
   body {
-    background-color: theme('colors.primary-bg');
-    color: theme('colors.primary-text');
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: theme('colors.dark-bg');
-      color: theme('colors.dark-text');
-    }
+    @apply bg-primary-bg text-primary-text dark:bg-dark-bg dark:text-dark-text;
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
 @layer components {
   .cta-button {
-    @apply bg-accent dark:bg-dark-accent text-primary-bg dark:text-dark-bg font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 hover:shadow-lg;
+    @apply bg-accent text-white font-semibold px-8 py-4 rounded-md border border-accent hover:bg-accent-hover transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
   }
   
   .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-16 px-4 sm:px-6 lg:px-8;
   }
   
   .container-max {
-    @apply max-w-4xl mx-auto;
+    @apply max-w-6xl mx-auto;
   }
   
-  .text-gradient {
-    @apply text-accent dark:text-dark-accent;
+  .professional-card {
+    @apply bg-white dark:bg-gray-900 border border-border-light dark:border-border-dark rounded-lg shadow-card p-6 transition-colors duration-200;
   }
   
-  .glass-card {
-    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl shadow-lg;
+  .feature-item {
+    @apply flex items-start space-x-3 p-4 border border-border-light dark:border-border-dark rounded-md bg-white dark:bg-gray-900;
   }
   
-  .feature-bullet::before {
-    content: "✅";
-    @apply mr-3 text-accent dark:text-dark-accent;
+  .feature-marker {
+    @apply w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0;
   }
   
-  .pain-bullet::before {
-    content: "😩";
-    @apply mr-3;
+  .section-header {
+    @apply text-3xl sm:text-4xl font-bold text-primary-text dark:text-dark-text mb-6;
   }
   
-  .desire-bullet::before {
-    content: "✨";
-    @apply mr-3 text-accent dark:text-dark-accent;
+  .text-muted {
+    @apply text-primary-text/70 dark:text-dark-text/70;
+  }
+  
+  .divider {
+    @apply border-t border-border-light dark:border-border-dark my-8;
   }
 } 

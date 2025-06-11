@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -13,7 +14,9 @@ module.exports = {
         'dark-bg': '#0e0c0c',
         'dark-text': '#e5ccb7',
         'accent': '#312363',
-        'dark-accent': '#e5ccb7',
+        'accent-hover': '#1e1545',
+        'border-light': '#e2e8f0',
+        'border-dark': '#374151',
       },
       fontFamily: {
         'inter': ['Inter', 'system-ui', 'sans-serif'],
@@ -23,17 +26,16 @@ module.exports = {
         'section': 'clamp(2rem, 4vw, 3rem)',
       },
       boxShadow: {
-        'soft': '0 8px 20px rgba(0,0,0,0.03)',
-        'soft-black': '0 4px 12px rgba(0, 0, 0, 0.07)',
+        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       animation: {
-        'fadeInUp': 'fadeInUp 0.6s ease forwards',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fadeIn': 'fadeIn 0.5s ease-in',
       },
       keyframes: {
-        fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         }
       }
     },
