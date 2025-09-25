@@ -9,25 +9,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#f5fcfa',
-        'primary-text': '#312363',
+        // New palette per design brief
+        'primary-bg': '#FBFDFF',
+        'background': '#FBFDFF',
+        'surface': '#FFFFFF',
+        'primary-text': '#0B1520',
+        'muted-text': '#6B7280',
         'dark-bg': '#0e0c0c',
         'dark-text': '#e5ccb7',
-        'accent': '#312363',
-        'accent-hover': '#1e1545',
-        'border-light': '#e2e8f0',
+        'primary': '#0B6EFF',
+        'accent': '#0B6EFF',
+        'accent-hover': '#336BFF',
+        'cta': '#FF6A3D',
+        'border-light': 'rgba(11,36,54,0.03)',
         'border-dark': '#374151',
+        'glass-overlay': 'rgba(11,36,54,0.04)'
       },
       fontFamily: {
         'inter': ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': 'clamp(2.5rem, 6vw, 4rem)',
-        'section': 'clamp(2rem, 4vw, 3rem)',
+        'hero': 'clamp(2.25rem, 5vw, 3.5rem)',
+        'section': 'clamp(1.5rem, 3vw, 2rem)',
       },
       boxShadow: {
-        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'subtle': '0 1px 2px rgba(11,36,54,0.06), 0 1px 3px rgba(11,36,54,0.08)',
+        'card': '0 6px 20px rgba(11,36,54,0.08)',
+        'elevated': '0 10px 24px rgba(11,36,54,0.12)'
       },
       animation: {
         'fadeIn': 'fadeIn 0.5s ease-in',

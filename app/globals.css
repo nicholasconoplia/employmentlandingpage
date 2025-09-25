@@ -15,9 +15,12 @@
 }
 
 @layer components {
-  .cta-button {
-    @apply bg-accent text-white font-semibold px-8 py-4 rounded-md border border-accent hover:bg-accent-hover transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  .cta-button { /* Primary CTA with gradient + lift */
+    @apply text-white font-semibold px-6 py-3 rounded-xl shadow-subtle border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-image: linear-gradient(90deg, theme('colors.accent'), theme('colors.accent-hover'));
   }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: theme('boxShadow.elevated'); }
+  .cta-secondary { @apply text-accent border border-accent bg-transparent px-6 py-3 rounded-xl hover:bg-accent/5 transition-colors; }
   
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
@@ -28,11 +31,11 @@
   }
   
   .professional-card {
-    @apply bg-white dark:bg-gray-900 border border-border-light dark:border-border-dark rounded-lg shadow-card p-6 transition-colors duration-200;
+    @apply bg-white dark:bg-gray-900 border border-border-light dark:border-border-dark rounded-2xl shadow-card p-6 transition-colors duration-200;
   }
   
   .feature-item {
-    @apply flex items-start space-x-3 p-4 border border-border-light dark:border-border-dark rounded-md bg-white dark:bg-gray-900;
+    @apply flex items-start space-x-3 p-4 border border-border-light dark:border-border-dark rounded-xl bg-white dark:bg-gray-900;
   }
   
   .feature-marker {
@@ -44,10 +47,16 @@
   }
   
   .text-muted {
-    @apply text-primary-text/70 dark:text-dark-text/70;
+    @apply text-muted-text;
   }
   
   .divider {
     @apply border-t border-border-light dark:border-border-dark my-8;
+  }
+
+  /* Sticky translucent header styling */
+  .header-blur {
+    backdrop-filter: saturate(180%) blur(10px);
+    background: rgba(255,255,255,0.7);
   }
 } 
